@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #a5b4fc, #fbcfe8, #fde68a);
+  background-size: 300% 300%;
+  animation: bgMove 12s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.game {
+  width: 94%;
+  max-width: 440px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px);
+  padding: 22px;
+  border-radius: 26px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #6366f1, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mascot {
+  font-size: 56px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin: 7px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover { transform: translateY(-2px); }
+
+.back-btn {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 16px;
+  border: none;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.hidden { display: none; }
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+#question {
+  font-size: 24px;
+  margin: 18px 0 10px;
+}
+
+#feedback {
+  min-height: 26px;
+  font-weight: 600;
+}
+
+.table-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin: 12px 0;
+}

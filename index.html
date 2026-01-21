@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Master Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+  <h1>🎮 Math Master</h1>
+  <div class="mascot" id="mascot">🐼</div>
+
+  <!-- MAIN MENU -->
+  <div id="menu">
+    <button onclick="startGame('square')">🟦 Squares</button>
+    <button onclick="startGame('cube')">🔷 Cubes</button>
+    <button onclick="startGame('fraction')">➗ Fractions → %</button>
+    <button onclick="openTablesMenu()">🔢 Tables</button>
+    <button onclick="startGame('addition')">➕ Addition</button>
+    <button onclick="startGame('subtraction')">➖ Subtraction</button>
+  </div>
+
+  <!-- TABLES MENU -->
+  <div id="tablesMenu" class="hidden">
+    <h3>Select Table</h3>
+    <div class="table-grid" id="tableGrid"></div>
+    <button onclick="startMixedTables()">🔥 Tables Master</button>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <!-- GAME PLAY -->
+  <div id="play" class="hidden">
+    <div class="top-bar">
+      <span id="level"></span>
+      <span id="timer">⏱ 0.0s</span>
+      <span id="score">⭐ 0</span>
+    </div>
+
+    <h2 id="question"></h2>
+
+    <input id="answer" inputmode="decimal" placeholder="Your answer">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="feedback"></p>
+    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
